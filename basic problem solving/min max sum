@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+
+
+class Solution {
+public:
+    double average(vector<int>& salary) 
+    {
+
+        int n=salary.size();
+        
+        sort(salary.begin(),salary.end());
+            
+        
+        int sum=0,count=0;
+        for(int i=1;i<n-1;i++)
+        {   
+            count++;
+            sum += salary[i];
+        }
+        int avg= sum/count;
+        return avg;
+    }
+};
