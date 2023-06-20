@@ -1,0 +1,20 @@
+int birthdayCakeCandles(vector<int> candles) 
+//print the number of "largest number" in an array 
+{   int n=candles.size();
+    int h=0 , count=0;
+    
+    for(int i=0;i<n;i++)
+    {   
+        
+        if(candles[i]>h)
+            h=candles[i];
+    }
+    
+    for(int i=0;i<n;i++)
+    {
+        if(h==candles[i])
+            count+=1;
+    }
+    
+    return count;
+}
